@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_promotion_status"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="#FFEB3B">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_promotion_shop"
+            android:layout_width="match_parent"
+            android:foreground="@android:drawable/screen_background_dark_transparent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_shop_promotion_and_guide" />
+
+        <TextView
+            android:id="@+id/tv_4_for_1_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/v_line"
+            android:layout_below="@+id/tv_burpple_exclusive"
+            android:layout_marginTop="12dp"
+            android:text="4-for-1-free"
+            android:textColor="@color/full_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_burpple_exclusive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_4_for_1_free"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_button"
+            android:padding="4dp"
+            android:text="BURPPLE EXCLUSIVE"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignRight="@id/iv_promotion_shop"
+            android:layout_below="@id/tv_4_for_1_free"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/full_white"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_dead_line_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_4_for_1_free"
+            android:layout_below="@id/v_line"
+            android:layout_marginTop="8dp"
+            android:text="Till 31st JAN 18"
+            android:textColor="@color/full_white" />
+
+
+        <TextView
+            android:id="@+id/tv_bbq_and_grill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_4_for_1_free"
+            android:layout_below="@id/iv_promotion_shop"
+            android:padding="4dp"
+            android:text="BBQ and Grill"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_promotion_shop_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_4_for_1_free"
+            android:layout_below="@id/tv_bbq_and_grill"
+            android:padding="4dp"
+            android:text="Yangon"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+</RelativeLayout>

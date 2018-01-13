@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.acer.findforfood.viewitems.ImagesInShopDetailViewItem
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/iv_shop_image"
+        android:src="@drawable/img_food_shop"
+        android:foreground="@android:drawable/screen_background_dark_transparent"
+        android:scaleType="centerCrop"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <TextView
+            android:id="@+id/tv_features"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bordered_button"
+            android:padding="8dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="12dp"
+            android:text="FEATURES"
+            android:textSize="8sp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_features"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="NEWLY OPENED"
+            android:textColor="@color/full_white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="NEWLY OPENED"
+            android:textColor="@color/full_white"
+            android:textSize="20sp"
+            android:id="@+id/tv_sub_title"/>
+
+    </RelativeLayout>
+
+
+</com.example.acer.findforfood.viewitems.ImagesInShopDetailViewItem>

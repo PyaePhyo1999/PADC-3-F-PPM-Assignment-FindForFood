@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.acer.findforfood.activities.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vg_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+
+
+                </android.support.v4.view.ViewPager>
+
+                <TextView
+                    android:id="@+id/tv_app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="burpple"
+                    android:textColor="@color/full_white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_search_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_app_title"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/full_white"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:hint="  Search e.g. Japanese in Orchard"
+                    android:padding="8dp"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/news_details_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_find_for_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/et_search_box"
+            android:layout_alignTop="@+id/tv_app_title"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_featured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:text="FEATURED" />
+
+            <TextView
+                android:id="@+id/tv_promotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_featured"
+                android:layout_below="@id/tv_featured"
+                android:text="Promotions"
+                android:textColor="@color/full_black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_promotion"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:foreground="@drawable/ripple_pink"
+                android:text="See More"
+                android:textColor="@color/colorAccent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_promotion_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_promotion"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/tv_latest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_featured"
+                android:layout_below="@id/rv_promotion_news"
+                android:layout_marginTop="36dp"
+                android:text="LATEST" />
+
+            <TextView
+                android:id="@+id/tv_burpple_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_featured"
+                android:layout_below="@id/tv_latest"
+                android:text="Burpple Guides"
+                android:textColor="@color/full_black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/see_more_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_burpple_guide"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:foreground="@drawable/ripple_pink"
+                android:text="See More"
+                android:textColor="@color/colorAccent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_burpple_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_burpple_guide"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/tv_latest_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_featured"
+                android:layout_below="@id/rv_burpple_guide"
+                android:layout_marginTop="36dp"
+                android:text="LATEST" />
+
+            <TextView
+                android:id="@+id/tv_new_and_trending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_featured"
+                android:layout_below="@id/tv_latest_2"
+                android:text="New and Trending"
+                android:textColor="@color/full_black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_new_and_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_featured"
+                android:layout_alignRight="@id/see_more"
+                android:layout_below="@id/tv_new_and_trending"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_newly_opened"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_newly_opened"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_newly_opened"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Newly Opened"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp" />
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_news"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_newly_opened"
+                            android:layout_marginTop="8dp">
+
+
+                        </android.support.v7.widget.RecyclerView>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rv_news"
+                            android:layout_marginTop="12dp"
+                            android:foreground="@drawable/ripple_white">
+
+                            <View
+                                android:id="@+id/tv_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/pale_black" />
+
+                            <TextView
+                                android:id="@+id/tv_explore"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_line"
+                                android:layout_marginLeft="12dp"
+                                android:padding="12dp"
+                                android:text="EXPLORE" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_trending_venues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_trending_venues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_trending_venues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Trending Venues"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp" />
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_trending_venues"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_trending_venues"
+                            android:layout_marginTop="8dp">
+
+                        </android.support.v7.widget.RecyclerView>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rv_trending_venues"
+                            android:layout_marginTop="12dp"
+                            android:foreground="@drawable/ripple_white">
+
+                            <View
+                                android:id="@+id/tv_line_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/pale_black" />
+
+                            <TextView
+                                android:id="@+id/tv_explore_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_line_1"
+                                android:layout_marginLeft="12dp"
+                                android:padding="12dp"
+                                android:text="EXPLORE" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tv_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_new_and_trend"
+                android:layout_marginTop="30dp"
+                android:background="@color/pale_black" />
+
+            <RelativeLayout
+                android:id="@+id/rv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_line_2"
+                android:foreground="@drawable/ripple_white">
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_location"
+                    android:padding="16dp"
+                    android:text="Explore Neighbourhoods"
+
+                    />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/tv_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rv_location"
+                android:background="@color/pale_black" />
+
+            <RelativeLayout
+                android:id="@+id/rv_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_line_3"
+                android:foreground="@drawable/ripple_white">
+
+                <ImageView
+                    android:id="@+id/iv_restaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_restaurant_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_restaurant"
+                    android:padding="16dp"
+                    android:text="Explore Categories"
+
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rv_restaurant"
+                android:layout_marginBottom="20dp"
+                android:background="@color/pale_black" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

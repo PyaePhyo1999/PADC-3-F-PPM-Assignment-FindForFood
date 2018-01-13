@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FindForFood</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_and_place" >BBQ and Grill... \n Yangon</string>
+    <string name="newly_opened"> <u>NEWLY OPENED</u> </string>
+</resources>
